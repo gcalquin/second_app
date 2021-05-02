@@ -5,11 +5,44 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
+
+		<link rel="stylesheet" href="/main.css" />
+		<noscript><link rel="stylesheet" href="/noscript.css" /></noscript>
+
+
   </head>
 
   <body>
+
+			<!-- Header -->
+				<div id="header">
+
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><%= link_to "Home", pages_index_path %></li>
+								<li><%= link_to "Dropdown-(Test)", pages_test_path %></li>
+								<li><%= link_to "Left-sidebar.html-(login)", users_login_path %></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
     <%= yield %>
+
+			<script src="/jquery.min.js"></script>
+			<script src="/jquery.dropotron.min.js"></script>
+			<script src="/jquery.scrolly.min.js"></script>
+			<script src="/jquery.scrollex.min.js"></script>
+			<script src="/browser.min.js"></script>
+			<script src="/breakpoints.min.js"></script>
+			<script src="/util.js"></script>
+			<script src="/main.js"></script>
+
   </body>
 </html>
